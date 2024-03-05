@@ -4,12 +4,10 @@ import matplotlib.pylab as pie
 db = sqlite3.connect('MYDATA.db')
 cursor = db.cursor()
 
-keyword1 = 'not receiving'
-keyword2 = 'unemployment'
 
 
 # Execute an SQL query to select rows where the 'field30' column contains the keyword
-cursor.execute("SELECT * FROM CDCB WHERE LOWER(field38) LIKE ? AND LOWER(field38) LIKE ?", ('%' + keyword1 + '%', '%' + keyword2 + '%',) )
+cursor.execute("SELECT * FROM CDCB WHERE LOWER(field38) LIKE %not receiving% AND LOWER(field38) LIKE %unemployment%")
 
 # Fetch the matching rows
 matching_rows = cursor.fetchall()
