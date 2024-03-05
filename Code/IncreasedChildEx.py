@@ -4,12 +4,11 @@ import matplotlib.pylab as plt
 db = sqlite3.connect('MYDATA.db')
 cursor = db.cursor()
 
-keyword1 = 'child'
 countF = 0
 countM = 0
 
 
-cursor.execute("SELECT field39, field30 FROM CDCB WHERE LOWER(field39) LIKE ?", ('%' + keyword1 + '%',))
+cursor.execute("SELECT field39, field30 FROM CDCB WHERE LOWER(field39) LIKE %child%))
 matching = cursor.fetchall()
 total = len(matching)
 
