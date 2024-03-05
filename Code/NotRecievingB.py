@@ -7,7 +7,7 @@ cursor = db.cursor()
 
 
 # Execute an SQL query to select rows where the 'field30' column contains the keyword
-cursor.execute("SELECT * FROM CDCB WHERE LOWER(field38) LIKE %not receiving% AND LOWER(field38) LIKE %unemployment%")
+cursor.execute("SELECT * FROM CDCB WHERE LOWER(field38) LIKE '%not receiving%' AND LOWER(field38) LIKE '%unemployment%'")
 
 # Fetch the matching rows
 matching_rows = cursor.fetchall()
