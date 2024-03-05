@@ -7,7 +7,7 @@ cursor = db.cursor()
 total = 0
 
 # Execute the SQL query to count the number of rows for each condition
-cursor.execute("SELECT COUNT(*) FROM CDCB WHERE field42 = 'Yes' AND field21 = 'Yes';")
+cursor.execute("SELECT COUNT(*) FROM CDCB WHERE field42 = 'Yes' AND field21 = 'Yes' ")
 yesCount = cursor.fetchone()[0]
 
 cursor.execute("SELECT COUNT(*) FROM CDCB WHERE field42 = 'No' AND field21 = 'No';")
