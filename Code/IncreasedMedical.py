@@ -5,7 +5,7 @@ db = sqlite3.connect("MYDATA.db")
 cursor = db.cursor()
 
 
-cursor.execute("SELECT COUNT(*) FROM CDCB WHERE LOWER(field39) LIKE %medical expenses%")
+cursor.execute("SELECT COUNT(*) FROM CDCB WHERE LOWER(field39) LIKE '%medical expenses%' ")
 totalME = cursor.fetchone()[0]
 
 cursor.execute("SELECT field39 FROM CDCB")
