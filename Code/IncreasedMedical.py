@@ -3,9 +3,9 @@ import matplotlib.pylab as plt
 
 db = sqlite3.connect("MYDATA.db")
 cursor = db.cursor()
-keyword = 'medical expenses'
 
-cursor.execute("SELECT COUNT(*) FROM CDCB WHERE LOWER(field39) LIKE ?", ('%' + keyword + '%',))
+
+cursor.execute("SELECT COUNT(*) FROM CDCB WHERE LOWER(field39) LIKE %medical expenses%")
 totalME = cursor.fetchone()[0]
 
 cursor.execute("SELECT field39 FROM CDCB")
