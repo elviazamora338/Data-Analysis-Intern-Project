@@ -8,7 +8,7 @@ countF = 0
 countM = 0
 
 
-cursor.execute("SELECT field39, field30 FROM CDCB WHERE LOWER(field39) LIKE %child%))
+cursor.execute("SELECT field39, field30 FROM CDCB WHERE LOWER(field39) LIKE %child% ")
 matching = cursor.fetchall()
 total = len(matching)
 
